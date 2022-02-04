@@ -1,0 +1,22 @@
+plugins {
+    id 'groovy' // （必选）用于实现插件
+    id 'maven' // 用于发布插件
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+}
+
+// 设置源文件路径
+sourceSets {
+    main {
+        groovy {
+            srcDir 'src/main/groovy'
+        }
+
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+}
